@@ -1,0 +1,92 @@
+{
+  "codigo_usuario": "PJ000001",
+  "descripcion": {
+  /*2.1 Datos de Oficina (Oficina de Estreno)*/
+  
+  /*Descripción de edificio*/
+  /*Antiguedad*/
+  URL: /antiguedad (Metodo Get)
+  "id_antiguedad": 1,
+  /*Nro. Pisos*/
+  "nro_pisos": 8,
+  /*Nro. dptos por pisos*/
+  URL: /pisos-departamento (Metodo Get)
+  "id_nro_pisos_departamento": 8,
+  /*Areas Comunes*/
+  "areas_comunes": null,
+  /*Costo Mantenimiento*/
+  "costo_mantenimiento": "costo dasdas",
+
+  /*Descripcion de oficina*/
+  /*Area Ocupada*/
+  "area_ocupada": "69",
+  /*Área Construida*/
+  "area_construida": "208",
+  /*Ubicacion del departamento*/
+  "ubi_departamento": "Ubicado en 4 piso"
+
+    /*Estacionamiento*/
+    URL: /estacionamiento  (Metodo Get)
+    "id_estacionamiento": 1
+
+  },
+  "caracteristicas": {
+    "inmueble_id": 109,
+    "tipo_inmueble_id": 12,
+
+  /*Lobby Ingreso*/
+  "lobby_ingreso": 1,
+  /*Ascensor*/
+  "ascensor": 1,
+  /*Jardin*/
+  "jardin": 0,
+  /*Piscina*/
+  "piscina": 1,
+  /*Gimnasio*/
+  "gimnasio": 0,
+  /*Video Vigilancia*/
+  "video_vigilancia": 1,
+  /*Cero Electrico*/
+  "cerco_electrico": 1,
+  /*Cisterna*/
+  "cisterna": 1,
+  /*Permiten Mascotas*/
+  "permiten_mascotas": 1,
+  /*Reglamento Interno*/
+  "reglamento_interno": 1,
+  /*Reposteros Cocina*/
+  "reposteros_cocina": 1,
+  /*Jacuzzi*/
+  "jacuzzi": 0,
+  /*Walk Closet*/
+  "walk_closet": 1,
+  /*Parrilla*/
+  "parrilla": 1,
+  
+  /*Servicios Publicos*/
+  /*Agua*/
+  "agua": 1,
+  /*Electricidad*/
+  "electricidad": 1,
+  /*Instalacion Gas*/
+  "instalacion_gas": 1,
+  
+
+  /*Ambientes*/
+  "ambientes": "",
+  /*Amoblado*/
+  "amoblado": 0,
+  /*Cortinas*/
+  "cortinas": 0,
+  /*Telefono*/
+  "telefono": 0,
+  /*Cable*/
+  "cable": 0,
+  /*Internet*/
+  "internet": 0,
+  /*Inventario*/
+  "inventario": 0,
+
+  }
+}
+  

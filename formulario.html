@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reCAPTCHA v3 Login Example</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdtDwMqAAAAAMryjaJM4f1HC3dVMAcAnQb_DrPS"></script>
+    <script>
+        async function onSubmit(event) {
+            event.preventDefault();
+
+            grecaptcha.ready(async function () {
+                const token = await grecaptcha.execute('6LdtDwMqAAAAAMryjaJM4f1HC3dVMAcAnQb_DrPS', { action: 'login' });
+                console.log({ token });
+
+                // Obtener valores del formulario
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                // Crear el cuerpo de la solicitud
+                const body = {
+                    correo_electronico: email,
+                    password: password,
+                    recaptcha_token: token
+                };
+
+                // Realizar la solicitud de login
+                try {
+                    const response = await fetch('https://presto.financiamientoinmobiliarioperu.com/api/loginUsuario', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(body)
+                    });
+
+                    const result = await response.json();
+                    console.log({ result });
+
+                    if (response.ok) {
+                        alert('Login successful');
+                        // Redirigir o realizar otras acciones
+                    } else {
+                        alert(`Login failed: ${result.message}`);
+                    }
+                } catch (error) {
+                    console.error('Error during login:', error);
+                    alert('An error occurred during login');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <form id="login-form" onsubmit="onSubmit(event)">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <br />
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
